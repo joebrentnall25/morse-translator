@@ -2,15 +2,14 @@ import {data} from './assets/data/data.js';
 
 const dictionary = data.dictionary;
 
-const translate = (word, option) => {
+export const translate = (word, option) => {
     const translatedArr = [];
-    let result = '';
     if (option == 0){
         const charArr = word.split("");
         for (let i = 0; i<charArr.length; i++) {
             translatedArr.push(translateSingleCharacterToEnglish(charArr[i]));
         }
-        result = translatedArr.join(" ")
+        const result = translatedArr.join(" ")
         return result;
     }
     else if (option == 1) {
@@ -23,10 +22,11 @@ const translate = (word, option) => {
             }
             translatedArr.push(" ");
         }
-        result = translatedArr.join("");
+        translatedArr.pop();
+        let result = translatedArr.join("");
+        //result = result.replace(/\s+/g, '');
         return result;
     }
-    return result;
 }
 
 const translateSingleCharacterToEnglish = (letter) => {
@@ -34,19 +34,35 @@ const translateSingleCharacterToEnglish = (letter) => {
         if (dictionary[i][0] == letter) {
             return dictionary[i][1]
         }
-        if (letter == " ") {
+        else if (letter == " ") {
             return "/";
-        }
+        }       
     }
+    return "#";
 }
 
-const translateSingleMorseToEnglish = (letter) => {
-    
+const translateSingleMorseToEnglish = (letter) => {    
     for (let i = 0; i<dictionary.length; i++) {
         if (dictionary[i][1] == letter){
             return dictionary[i][0];
         }
     }
+    if (letter != ""){
+        return '#';
+    } 
 }
 
-translate('.... . .-.. .-.. ---/.-- --- .-. .-.. -..', 1);
+document.getElementById('form__translate-btn').addEventListener('click', () => {
+    const text = document.getElementById('form__translate-input');
+    const output = document.getElementById('output__text');
+    const translateTo = document.getElementById('form__translate--toEnglish');
+
+    if (translateTo.checked){
+        const outputText = translate(text.value,1);
+        text.value = outputText;
+    }
+    else {
+        const outputText = translate(text.value,0);
+        text.value = outputText
+    }    
+})

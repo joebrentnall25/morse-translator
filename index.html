@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <div class="form__container">
+        <form class="form__content"" action="">
+            <label for="toMorse" id="form__translate--toMorse">Translate to Morse</label>
+            <input type="radio" name="translateTo" id="form__toMorse" value="toMorse">
+            <label for="form__toEnglish">Translate to English</label>
+            <input type="radio" id="form__translate--toEnglish" name="translateTo" id="toEnglish" value="toEnglish">
+            <input type="text" id="form__translate-input" name="text">
+            <button type="button" id="form__translate-btn" class="">Translate</button>
+        </form>
+    </div>
+    <div class="output__container">
+        <div id="output__text"></div>
+    </div>
+    <script src="index.js" defer type="module"></script>
+</body>
+</html>
