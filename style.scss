@@ -1,2 +1,10 @@
 @import "./assets/styles/pages/index.scss";
+@import "./assets/styles/utility/variable.scss";
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}

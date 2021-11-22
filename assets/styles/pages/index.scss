@@ -1,15 +1,38 @@
-.form__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .form__content {
+@import '../utility/variable.scss';
+
+body {
+    background-color: $primary;
+    .form__container {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        #form__translate-input {
-            padding: 2rem;
-            font-size: 30px;
+        margin: 10vh 10vw;
+        .form__content {
+            background-color: $secondary;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-radius: 5rem;
+            h1 {
+                margin: 2rem 0;
+            }
+            #form__translate-input {
+                width: 60%;
+                padding: 2rem;
+                font-size: 25px;
+                text-align: center;
+                margin: 2rem 0;
+                border-radius: 2rem;
+                color: $dark;
+            }
+            #form__translate-btn {
+                margin-bottom: 2rem;
+                padding: 1rem 2rem;
+                border-radius: 2rem;
+                color: $dark;
+            }
         }
     }
 }

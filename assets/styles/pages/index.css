@@ -1,15 +1,36 @@
-.form__container {
+body {
+  background-color: #F4A261;
+}
+body .form__container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10vh 10vw;
 }
-.form__container .form__content {
+body .form__container .form__content {
+  background-color: #2A9D8F;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  border-radius: 5rem;
 }
-.form__container .form__content #form__translate-input {
+body .form__container .form__content h1 {
+  margin: 2rem 0;
+}
+body .form__container .form__content #form__translate-input {
+  width: 60%;
   padding: 2rem;
-  font-size: 30px;
+  font-size: 25px;
+  text-align: center;
+  margin: 2rem 0;
+  border-radius: 2rem;
+  color: #264653;
+}
+body .form__container .form__content #form__translate-btn {
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: #264653;
 }
