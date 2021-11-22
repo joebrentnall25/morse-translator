@@ -16,7 +16,6 @@ export const translate = (word, option) => {
         const charArr = word.split("/");
         for (let i = 0; i<charArr.length; i++){
             const letter = charArr[i].split(' ');
-            console.log(letter)
             for (let i=0; i<letter.length; i++){
                 translatedArr.push(translateSingleMorseToEnglish(letter[i]));
             }
@@ -57,12 +56,13 @@ document.getElementById('form__translate-btn').addEventListener('click', () => {
     const output = document.getElementById('output__text');
     const translateTo = document.getElementById('form__translate--toEnglish');
 
-    if (translateTo.checked){
+    if (translateTo.checked){        
         const outputText = translate(text.value,1);
         text.value = outputText;
     }
     else {
-        const outputText = translate(text.value,0);
+        const textLowerCase = text.value.toLowerCase();
+        const outputText = translate(textLowerCase,0);
         text.value = outputText
     }    
 })

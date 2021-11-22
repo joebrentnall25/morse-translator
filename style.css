@@ -18,11 +18,12 @@ body .form__container .form__content {
 }
 body .form__container .form__content h1 {
   margin: 2rem 0;
+  text-align: center;
 }
 body .form__container .form__content #form__translate-input {
-  width: 60%;
+  width: 80%;
   padding: 2rem;
-  font-size: 25px;
+  font-size: 16px;
   text-align: center;
   margin: 2rem 0;
   border-radius: 2rem;
@@ -38,7 +39,7 @@ body .form__container .form__content #form__translate-btn {
 }
 body .form__container .form__content .form__radio-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
