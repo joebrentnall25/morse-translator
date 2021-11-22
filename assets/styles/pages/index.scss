@@ -26,12 +26,21 @@ body {
                 margin: 2rem 0;
                 border-radius: 2rem;
                 color: $dark;
+                border: none;
             }
             #form__translate-btn {
                 margin-bottom: 2rem;
                 padding: 1rem 2rem;
                 border-radius: 2rem;
                 color: $dark;
+                border: none;
+            }
+            .form__radio-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
             }
         }
     }
